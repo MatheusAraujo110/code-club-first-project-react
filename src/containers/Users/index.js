@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 
 import axios from "axios";
 
@@ -10,6 +11,8 @@ import { Container, H1, Image, ContainerItens, Button, User } from "../../contai
 function Users() {
   // const users = [];
   const [users, setUsers] = useState([]);  //ESTADO => VARIÁVEL
+  const history = useHistory();
+
 
   useEffect(() => {
     async function fetchUsers() {
@@ -34,6 +37,10 @@ function Users() {
     setUsers(newUsers);
   }
 
+  function goBackPage() {
+    history.push('/');
+  }
+
   return (
     <Container>
       <Image alt="logo-imagem" src={Avatar} />
@@ -49,7 +56,7 @@ function Users() {
           ))}
         </ul>
 
-        <Button to="/">
+        <Button onClick={goBackPage}>
           <img alt="seta" src={Arrow} />
           Voltar
         </Button>
