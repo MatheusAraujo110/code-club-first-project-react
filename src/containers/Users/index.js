@@ -9,8 +9,9 @@ import Trash from "../../assets/18297 4.png";
 
 import H1 from "../../components/Title"
 import ContainerItens from "../../components/ContainesItens"
+import Button from "../../components/Button";
 
-import { Container, Image, Button, User } from "../../containers/Users/style";
+import { Container, Image, User } from "../../containers/Users/style";
 function Users() {
   // const users = [];
   const [users, setUsers] = useState([]);  //ESTADO => VARIÁVEL
@@ -59,7 +60,7 @@ function Users() {
           ))}
         </ul>
 
-        <Button onClick={goBackPage}>
+        <Button isBack={true} onClick={goBackPage}>
           <img alt="seta" src={Arrow} />
           Voltar
         </Button>

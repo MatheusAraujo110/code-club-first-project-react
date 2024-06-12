@@ -9,9 +9,10 @@ import Arrow from "../../assets/seta.png";
 
 import H1 from '../../components/Title'
 import ContainerItens from '../../components/ContainesItens'
+import Button from "../../components/Button";
 
 
-import { Container, Image, InputLabel, Input, Button, } from "../../containers/Home/style";
+import { Container, Image, InputLabel, Input, } from "../../containers/Home/style";
 function App() {
   const [users, setUsers] = useState([]);  //ESTADO => VARIÁVEL
   const navigate = useNavigate();
