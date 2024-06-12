@@ -7,7 +7,11 @@ import axios from "axios";
 import People from "../../assets/Consulting_Isometric 1.png";
 import Arrow from "../../assets/seta.png";
 
-import { Container, H1, Image, ContainerItens, InputLabel, Input, Button, } from "../../containers/Home/style";
+import H1 from '../../components/Title'
+import ContainerItens from '../../components/ContainesItens'
+
+
+import { Container, Image, InputLabel, Input, Button, } from "../../containers/Home/style";
 function App() {
   const [users, setUsers] = useState([]);  //ESTADO => VARIÁVEL
   const navigate = useNavigate();
@@ -37,7 +41,7 @@ function App() {
     <Container>
       <Image alt="logo-imagem" src={People} />
       <ContainerItens>
-        <H1>Olá! </H1>
+        <H1>Faça seu cadastro!</H1>
 
         <InputLabel>Nome</InputLabel>
         <Input ref={inputName} placeholder="Nome" />

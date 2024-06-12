@@ -7,7 +7,10 @@ import Avatar from "../../assets/User Profile_Monochromatic 2.png";
 import Arrow from "../../assets/seta.png";
 import Trash from "../../assets/18297 4.png";
 
-import { Container, H1, Image, ContainerItens, Button, User } from "../../containers/Users/style";
+import H1 from "../../components/Title"
+import ContainerItens from "../../components/ContainesItens"
+
+import { Container, Image, Button, User } from "../../containers/Users/style";
 function Users() {
   // const users = [];
   const [users, setUsers] = useState([]);  //ESTADO => VARIÁVEL
