@@ -10,4 +10,12 @@ padding: 20px 26px;
 display: flex;
 flex-direction: column;
 height: 70vh;
+
+  ${(props) =>
+        props.isBlur &&
+        `
+    backdrop-filter: blur(45px);
+    min-height: calc(100vh - 170px);
+  `
+  }
 `;
