@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import axios from "axios";
 
@@ -11,7 +11,7 @@ import { Container, H1, Image, ContainerItens, Button, User } from "../../contai
 function Users() {
   // const users = [];
   const [users, setUsers] = useState([]);  //ESTADO => VARIÁVEL
-  const history = useHistory();
+  const navigate = useNavigate();
 
 
   useEffect(() => {
@@ -38,7 +38,7 @@ function Users() {
   }
 
   function goBackPage() {
-    history.push('/');
+    navigate('/');
   }
 
   return (

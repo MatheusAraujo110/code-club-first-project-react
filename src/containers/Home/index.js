@@ -1,5 +1,6 @@
 import React, { useState, useRef, } from "react";
-import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { useNavigate } from "react-router-dom";
+
 
 import axios from "axios";
 
@@ -9,7 +10,7 @@ import Arrow from "../../assets/seta.png";
 import { Container, H1, Image, ContainerItens, InputLabel, Input, Button, } from "../../containers/Home/style";
 function App() {
   const [users, setUsers] = useState([]);  //ESTADO => VARIÁVEL
-  const history = useHistory();
+  const navigate = useNavigate();
 
 
   const inputName = useRef();
@@ -23,7 +24,7 @@ function App() {
 
     setUsers([...users, newUser]);
 
-    history.push('/usuarios');
+    navigate('/usuarios');
 
   }
 
